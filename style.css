@@ -1,0 +1,95 @@
+/* Базовые стили */
+body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    background: #fffaf6;
+    color: #2c2c2c;
+    line-height: 1.6;
+}
+
+/* Скрытая ссылка "Пропустить к содержимому" */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000;
+    color: #fff;
+    padding: 8px;
+    z-index: 100;
+}
+.skip-link:focus {
+    top: 0;
+}
+
+/* Навигация */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffe0c0;
+    padding: 1rem;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+}
+
+/* Главная секция */
+.intro {
+    padding: 2rem;
+    text-align: center;
+}
+
+.intro img.main-photo {
+    max-width: 90%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin-top: 1rem;
+}
+
+/* Подвал */
+footer {
+    text-align: center;
+    background: #ffe0c0;
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: #444;
+    margin-top: 2rem;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+    .nav-links.show {
+        display: flex;
+    }
+    .menu-toggle {
+        display: block;
+    }
+}
